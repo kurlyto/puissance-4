@@ -1,0 +1,94 @@
+body * {
+  margin: 2px;
+  place-items:center;
+}
+body {
+  background-color:rgb(0, 0, 0)
+}
+
+#start-button{
+  color:rgb(230, 117, 117);
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+  font-size:32px;
+  font-family: "Bungee", cursive;
+  background-color:rgb(182, 201, 217);
+  border-radius:15px;
+  padding:10px;
+}
+#start-button:hover{
+  background-color:rgb(0, 0, 0);
+  cursor:pointer;
+}
+
+#board{
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  background-color: blue;
+  width:450px;
+  border-radius:5px;
+  border: 2px solid black;
+}
+#board:hover{
+  cursor:pointer;
+}
+
+
+.colonne:hover{
+  background-color:rgba(4, 4, 69, 0.499);
+  cursor:pointer;
+  border-radius:20px;
+}
+
+.colonne{
+  background-color:blue;
+  border-radius: 25px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.empty-spot{
+  width:50px;
+  height:50px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  border:1px solid white;
+}
+
+#player1-spot{
+  width:50px;
+  height:50px;
+  background-color: yellow;
+  border-radius: 25px;
+  border:1px solid white;
+}
+
+.player2-spot{
+  width:50px;
+  height:50px;
+  background-color:red ;
+  border-radius: 25px;
+  border:1px solid white;
+}
+
+h1{
+  color:rgb(228, 202, 33);
+  margin-bottom:15px;
+  font-family: "Bungee", cursive;
+  font-size: 48px;
+  border-color: red 5px solid;
+  text-shadow: 4px 4px 10px #e42828;
+}
+h1:hover{
+  cursor:default;
+}
+
+footer{
+  text-align: center;
+  margin-top:25px;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(181, 180, 180)
+}
