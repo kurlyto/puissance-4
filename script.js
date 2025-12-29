@@ -1,7 +1,21 @@
 const mapCols = [];
 let isRedTurn = true;
-let gameOver = false;
+let isGameOver = false;
 let hasRedWin;
+
+function setInitialState() {
+  isRedTurn = true;
+  isGameOver = false;
+  hasRedWin = undefined;
+}
+
+function listenToStartButton() {
+  const startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", () => {
+    startButton.remove();
+    createBoard();
+  });
+}
 
 function createBoard() {
   mapCols.length = 0; //reset de la mapCols à chaque création de board
@@ -9,31 +23,26 @@ function createBoard() {
   const rows = 6;
   const board = document.createElement("section"); //créé la section board
   const main = document.querySelector("main"); //selectionne le main
-  const startButton = document.getElementById("start-button"); //selectionne le bouton start
-  startButton.addEventListener("click", () => {
-    //si on clique sur  le bouton
-    startButton.remove(); //le bouton s'enlève
-    main.appendChild(board); //on place board dans main
-    board.id = "board"; //on ajoute un ID à board
-    for (let i = 0; i < cols; i++) {
-      const mapCol = [];
-      mapCols.push(mapCol);
-      const colonne = document.createElement("section"); // on créé 7 colonnes
-      colonne.classList.add("colonne"); //on leur donne une classe
-      colonne.addEventListener("click", () => listenMoves(i + 1)); //on ecoute le bouton
-      board.appendChild(colonne); //on place colonne dans board
-      for (let x = 0; x < rows; x++) {
-        const emptySpot = document.createElement("div"); //on créé 6 cases par colonne
-        emptySpot.classList.add("empty-spot"); //on ajoute une classe aux cases
-        colonne.appendChild(emptySpot); //on place ces cases dans colonne
-        mapCol.push(emptySpot);
-      }
+  main.appendChild(board); //on place board dans main
+  board.id = "board"; //on ajoute un ID à board
+  for (let i = 0; i < cols; i++) {
+    const mapCol = [];
+    mapCols.push(mapCol);
+    const colonne = document.createElement("section"); // on créé 7 colonnes
+    colonne.classList.add("colonne"); //on leur donne une classe
+    colonne.addEventListener("click", () => listenMoves(i + 1)); //on ecoute le bouton
+    board.appendChild(colonne); //on place colonne dans board
+    for (let x = 0; x < rows; x++) {
+      const emptySpot = document.createElement("div"); //on créé 6 cases par colonne
+      emptySpot.classList.add("empty-spot"); //on ajoute une classe aux cases
+      colonne.appendChild(emptySpot); //on place ces cases dans colonne
+      mapCol.push(emptySpot);
     }
-  });
+  }
 }
 
 function listenMoves(i) {
-  if (gameOver) {
+  if (isGameOver) {
     return;
   }
   let x;
@@ -355,7 +364,7 @@ function checkGameStatus(i, x) {
           (mapCols[i + 1] &&
             mapCols[i + 1][x + 2].classList.contains("red-spot"))))
     ) {
-      gameOver = true;
+      isGameOver = true;
       hasRedWin = true;
     }
   }
@@ -467,54 +476,68 @@ function checkGameStatus(i, x) {
           (mapCols[i + 1] &&
             mapCols[i + 1][x + 2].classList.contains("yellow-spot"))))
     ) {
-      gameOver = true;
+      isGameOver = true;
       hasRedWin = false;
     }
-    if (emptySpot.length === 0 && !gameOver) {
+    if (emptySpot.length === 0 && !isGameOver) {
       //match nul
-      gameOver = true;
+      isGameOver = true;
       hasRedWin = null;
     }
   }
-  revealWinner(gameOver, hasRedWin);
-  return gameOver;
+  revealWinner(isGameOver, hasRedWin);
+  return isGameOver;
 }
 
-function revealWinner(gameOver, hasRedWin) {
+function revealWinner(isGameOver, hasRedWin) {
   const board = document.getElementById("board");
+  const main = document.getElementsByTagName("main")[0];
   const endMessage = document.createElement("div");
-  if (gameOver && hasRedWin) {
-    console.log("Red won the game !");
+  const replayButton = document.createElement("button");
+  if (isGameOver && hasRedWin === true) {
     endMessage.id = "end-message";
-    endMessage.textContent = "Red team won the game !";
-    board.appendChild(endMessage);
+    endMessage.textContent = "Red won !";
+    main.appendChild(endMessage);
+    replayButton.id = "start-button";
+    replayButton.textContent = "Play Again ?";
+    main.appendChild(replayButton);
+    replayButton.addEventListener("click", () => {
+      board.remove();
+      replayButton.remove();
+      endMessage.remove();
+      setInitialState();
+      createBoard();
+    });
   }
-  if (gameOver && hasRedWin === false) {
-    console.log("Yellow won the game !");
+  if (isGameOver && hasRedWin === false) {
     endMessage.id = "end-message";
-    endMessage.textContent = "Yellow team won the game !";
-    board.appendChild(endMessage);
+    endMessage.textContent = "Yellow won !";
+    main.appendChild(endMessage);
+    replayButton.id = "start-button";
+    replayButton.textContent = "Play Again ?";
+    main.appendChild(replayButton);
+    replayButton.addEventListener("click", () => {
+      board.remove();
+      replayButton.remove();
+      endMessage.remove();
+      setInitialState();
+      createBoard();
+    });
   }
-  if (!gameOver) {
+  if (!isGameOver) {
     console.log("The game continues");
   }
-  if (gameOver && hasRedWin === null) {
+  if (isGameOver && hasRedWin === null) {
     console.log("Match nul !");
     endMessage.id = "end-message";
     endMessage.textContent = "Draw";
-    board.appendChild(endMessage);
+    main.appendChild(endMessage);
   }
 }
 
 function startGame() {
-  //bouton Jouer statique
-  //listen click Jouer
-  //creer board afficher board lors du clic sur jouer
-  //effacer boutons jouer
-  createBoard();
-  //listen buttons
-  //check game status
-  // showResults (victoire/defaite/play again)
+  setInitialState();
+  listenToStartButton();
 }
 
 startGame();
