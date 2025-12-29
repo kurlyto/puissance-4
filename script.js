@@ -241,7 +241,6 @@ function listenMoves(i) {
       }
     }
   }
-  console.log(mapCols);
   return { i, x };
 }
 
@@ -249,9 +248,6 @@ function listenMoves(i) {
 //position actuelle dans mapCols : i-1 (colonne) et x (ligne)
 function checkGameStatus(i, x) {
   console.log("Vérification de la victoire...");
-  console.log(mapCols);
-  console.log(mapCols[i - 1][x]);
-  console.log("case cliquée : " + mapCols[i - 1][x].classList);
   const board = document.getElementById("board");
   const emptySpot = board.getElementsByClassName("empty-spot");
   // SI LE DERNIER COUP EST ROUGE
@@ -337,7 +333,7 @@ function checkGameStatus(i, x) {
         mapCols[i + 2] &&
         mapCols[i + 2][x + 3] &&
         mapCols[i + 2][x + 3].classList.contains("red-spot")) || //haut droite existe, bas gauche existe, et OU 2x bas gauche OU 2x bas droite
-      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS DANS UN SENS
+      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS
       (mapCols[i] &&
         mapCols[i][x - 1] &&
         mapCols[i][x - 1].classList.contains("red-spot") && //en haut a droite
@@ -360,7 +356,7 @@ function checkGameStatus(i, x) {
             mapCols[i + 1][x + 2].classList.contains("red-spot"))))
     ) {
       gameOver = true;
-      console.log("RED WIN");
+      hasRedWin = true;
     }
   }
   // SI LE DERNIER COUP EST JAUNE
@@ -449,7 +445,7 @@ function checkGameStatus(i, x) {
         mapCols[i + 2] &&
         mapCols[i + 2][x + 3] &&
         mapCols[i + 2][x + 3].classList.contains("yellow-spot")) || //haut droite existe, bas gauche existe, et OU 2x bas gauche OU 2x bas droite
-      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS DANS UN SENS
+      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS
       (mapCols[i] &&
         mapCols[i][x - 1] &&
         mapCols[i][x - 1].classList.contains("yellow-spot") && //en haut a droite
@@ -472,19 +468,42 @@ function checkGameStatus(i, x) {
             mapCols[i + 1][x + 2].classList.contains("yellow-spot"))))
     ) {
       gameOver = true;
-      console.log("RED WIN");
-      revealWinner();
+      hasRedWin = false;
+    }
+    if (emptySpot.length === 0 && !gameOver) {
+      //match nul
+      gameOver = true;
+      hasRedWin = null;
     }
   }
+  revealWinner(gameOver, hasRedWin);
   return gameOver;
 }
 
-function revealWinner() {
-  if (gameOver) {
-    console.log("We have a winner !");
+function revealWinner(gameOver, hasRedWin) {
+  const board = document.getElementById("board");
+  const endMessage = document.createElement("div");
+  if (gameOver && hasRedWin) {
+    console.log("Red won the game !");
+    endMessage.id = "end-message";
+    endMessage.textContent = "Red team won the game !";
+    board.appendChild(endMessage);
   }
-  return hasRedWin;
-  //vérifier les conditions de victoire
+  if (gameOver && hasRedWin === false) {
+    console.log("Yellow won the game !");
+    endMessage.id = "end-message";
+    endMessage.textContent = "Yellow team won the game !";
+    board.appendChild(endMessage);
+  }
+  if (!gameOver) {
+    console.log("The game continues");
+  }
+  if (gameOver && hasRedWin === null) {
+    console.log("Match nul !");
+    endMessage.id = "end-message";
+    endMessage.textContent = "Draw";
+    board.appendChild(endMessage);
+  }
 }
 
 function startGame() {
