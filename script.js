@@ -45,7 +45,7 @@ function listenMoves(i) {
         mapCols[0][x].classList.remove("empty-spot");
         mapCols[0][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -59,7 +59,7 @@ function listenMoves(i) {
         mapCols[0][x].classList.remove("empty-spot");
         mapCols[0][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -74,7 +74,7 @@ function listenMoves(i) {
         mapCols[1][x].classList.remove("empty-spot");
         mapCols[1][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -88,7 +88,7 @@ function listenMoves(i) {
         mapCols[1][x].classList.remove("empty-spot");
         mapCols[1][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -103,7 +103,7 @@ function listenMoves(i) {
         mapCols[2][x].classList.remove("empty-spot");
         mapCols[2][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -117,7 +117,7 @@ function listenMoves(i) {
         mapCols[2][x].classList.remove("empty-spot");
         mapCols[2][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -132,7 +132,7 @@ function listenMoves(i) {
         mapCols[3][x].classList.remove("empty-spot");
         mapCols[3][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -146,7 +146,7 @@ function listenMoves(i) {
         mapCols[3][x].classList.remove("empty-spot");
         mapCols[3][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -161,7 +161,7 @@ function listenMoves(i) {
         mapCols[4][x].classList.remove("empty-spot");
         mapCols[4][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -175,7 +175,7 @@ function listenMoves(i) {
         mapCols[4][x].classList.remove("empty-spot");
         mapCols[4][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -190,7 +190,7 @@ function listenMoves(i) {
         mapCols[5][x].classList.remove("empty-spot");
         mapCols[5][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -204,7 +204,7 @@ function listenMoves(i) {
         mapCols[5][x].classList.remove("empty-spot");
         mapCols[5][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -219,7 +219,7 @@ function listenMoves(i) {
         mapCols[6][x].classList.remove("empty-spot");
         mapCols[6][x].classList.add("red-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion rouge en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = false;
         checkGameStatus(i, x);
@@ -233,7 +233,7 @@ function listenMoves(i) {
         mapCols[6][x].classList.remove("empty-spot");
         mapCols[6][x].classList.add("yellow-spot");
         console.log(
-          "Placement d'un pion en colonne " + i + " en position " + (x + 1)
+          "Placement d'un pion jaune en colonne " + i + " en ligne " + (x + 1)
         );
         isRedTurn = true;
         checkGameStatus(i, x);
@@ -249,76 +249,237 @@ function listenMoves(i) {
 //position actuelle dans mapCols : i-1 (colonne) et x (ligne)
 function checkGameStatus(i, x) {
   console.log("Vérification de la victoire...");
+  console.log(mapCols);
+  console.log(mapCols[i - 1][x]);
   console.log("case cliquée : " + mapCols[i - 1][x].classList);
-  console.log("case de droite = " + mapCols[i][x].classList);
-  console.log("case 2x à droite = " + mapCols[i + 1][x].classList);
-  console.log("case 3x à droite = " + mapCols[i + 2][x].classList);
   const board = document.getElementById("board");
   const emptySpot = board.getElementsByClassName("empty-spot");
   // SI LE DERNIER COUP EST ROUGE
-  if (mapCols[i - 1][x].classList.contains("red-spot")) {
+  if (mapCols[i - 1][x] && mapCols[i - 1][x].classList.contains("red-spot")) {
     if (
       // CAS 1 : LIGNE VERTICALE ROUGE
-      (mapCols[i - 1][x + 1].classList.contains("red-spot") && //case 1x en bas
-        mapCols[i - 1][x + 2].classList.contains("red-spot") && //case 2x en bas
-        mapCols[i - 1][x + 3].classList.contains("red-spot")) || //case 3x en bas
+      (mapCols[i - 1][x + 1] &&
+        mapCols[i - 1][x + 1].classList.contains("red-spot") &&
+        mapCols[i - 1][x + 2] &&
+        mapCols[i - 1][x + 2].classList.contains("red-spot") &&
+        mapCols[i - 1][x + 3] &&
+        mapCols[i - 1][x + 3].classList.contains("red-spot")) ||
       // CAS 2 : LIGNE HORIZONTALE ROUGE (DROITE)
-      (mapCols[i][x].classList.contains("red-spot") && //case de droite
-        mapCols[i + 1][x].classList.contains("red-spot") && // case 2x à droite
-        mapCols[i + 2][x].classList.contains("red-spot")) || // case 3x à droite
+      (mapCols[i] &&
+        mapCols[i][x] &&
+        mapCols[i][x].classList.contains("red-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x] &&
+        mapCols[i + 1][x].classList.contains("red-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x] &&
+        mapCols[i + 2][x].classList.contains("red-spot")) ||
       // CAS 2.1 : LIGNE HORIZONTALE ROUGE (GAUCHE)
-      (mapCols[i - 2][x].classList.contains("red-spot") && //case 1x à gauche
-        mapCols[i - 3][x].classList.contains("red-spot") && // case 2x à gauche
-        mapCols[i - 4][x].classList.contains("red-spot")) || // case 3x à gauche
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x] &&
+        mapCols[i - 2][x].classList.contains("red-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x] &&
+        mapCols[i - 3][x].classList.contains("red-spot") &&
+        mapCols[i - 4] &&
+        mapCols[i - 4][x] &&
+        mapCols[i - 4][x].classList.contains("red-spot")) ||
       // CAS 2.2 : LIGNE HORIZONTALE ROUGE (MIX DROITE/GAUCHE)
-      //2 cases à droite et 1 case à gauche
-      //1 case à droite et 2 cases à gauche
-      (mapCols[i][x].classList.contains("red-spot") && //case de droite
-        mapCols[i - 2][x].classList.contains("red-spot") && //case de gauche
-        (mapCols[i + 1][x].classList.contains("red-spot") ||
-          mapCols[i - 3][x].classList.contains("red-spot"))) //case 2x à droite OU 2x à gauche
+      (mapCols[i] &&
+        mapCols[i][x] &&
+        mapCols[i][x].classList.contains("red-spot") &&
+        mapCols[i - 2] &&
+        mapCols[i - 2][x] &&
+        mapCols[i - 2][x].classList.contains("red-spot") &&
+        ((mapCols[i + 1] &&
+          mapCols[i + 1][x] &&
+          mapCols[i + 1][x].classList.contains("red-spot")) ||
+          (mapCols[i - 3] &&
+            mapCols[i - 3][x] &&
+            mapCols[i - 3][x].classList.contains("red-spot")))) ||
+      //CAS 3.1 : DIAGONALES ROUGES HAUT GAUCHE
+      (mapCols[i] &&
+        mapCols[i][x - 1] &&
+        mapCols[i][x - 1].classList.contains("red-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x - 2] &&
+        mapCols[i + 1][x - 2].classList.contains("red-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x - 3] &&
+        mapCols[i + 2][x - 3].classList.contains("red-spot")) ||
+      //CAS 3.2 : DIAGONALES ROUGES HAUT GAUCHE
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x - 1] &&
+        mapCols[i - 2][x - 1].classList.contains("red-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x - 2] &&
+        mapCols[i - 3][x - 2].classList.contains("red-spot") &&
+        mapCols[i - 4] &&
+        mapCols[i - 4][x - 3] &&
+        mapCols[i - 4][x - 3].classList.contains("red-spot")) ||
+      //CAS 3.3 : DIAGONALES ROUGES BAS GAUCHE
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x + 1] &&
+        mapCols[i - 2][x + 1].classList.contains("red-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x + 2] &&
+        mapCols[i - 3][x + 2].classList.contains("red-spot") &&
+        mapCols[i - 4] &&
+        mapCols[i - 4][x + 3] &&
+        mapCols[i - 4][x + 3].classList.contains("red-spot")) ||
+      //CAS 3.4 DIAGONALES ROUGES BAS DROITE
+      (mapCols[i] &&
+        mapCols[i][x + 1] &&
+        mapCols[i][x + 1].classList.contains("red-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x + 2] &&
+        mapCols[i + 1][x + 2].classList.contains("red-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x + 3] &&
+        mapCols[i + 2][x + 3].classList.contains("red-spot")) || //haut droite existe, bas gauche existe, et OU 2x bas gauche OU 2x bas droite
+      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS DANS UN SENS
+      (mapCols[i] &&
+        mapCols[i][x - 1] &&
+        mapCols[i][x - 1].classList.contains("red-spot") && //en haut a droite
+        mapCols[i - 2] &&
+        mapCols[i - 2][x + 1] &&
+        mapCols[i - 2][x + 1].classList.contains("red-spot") && // en bas à gauche
+        ((mapCols[i + 1] &&
+          mapCols[i + 1][x - 2].classList.contains("red-spot")) || //2x haut droite ou gauche
+          (mapCols[i - 3] &&
+            mapCols[i - 3][x + 2].classList.contains("red-spot")))) ||
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x - 1] &&
+        mapCols[i - 2][x - 1].classList.contains("red-spot") &&
+        mapCols[i] &&
+        mapCols[i][x + 1] &&
+        mapCols[i][x + 1].classList.contains("red-spot") &&
+        ((mapCols[i - 3] &&
+          mapCols[i - 3][x - 2].classList.contains("red-spot")) ||
+          (mapCols[i + 1] &&
+            mapCols[i + 1][x + 2].classList.contains("red-spot"))))
     ) {
       gameOver = true;
       console.log("RED WIN");
     }
   }
   // SI LE DERNIER COUP EST JAUNE
-  if (mapCols[i - 1][x].classList.contains("yellow-spot")) {
+  if (
+    mapCols[i - 1][x] &&
+    mapCols[i - 1][x].classList.contains("yellow-spot")
+  ) {
     if (
       // CAS 1 : LIGNE VERTICALE JAUNE
-      (mapCols[i - 1][x + 1].classList.contains("yellow-spot") && //case 1x en bas
-        mapCols[i - 1][x + 2].classList.contains("yellow-spot") && //case 2x en bas
-        mapCols[i - 1][x + 3].classList.contains("yellow-spot")) || //case 3x en bas
+      (mapCols[i - 1][x + 1] &&
+        mapCols[i - 1][x + 1].classList.contains("yellow-spot") &&
+        mapCols[i - 1][x + 2] &&
+        mapCols[i - 1][x + 2].classList.contains("yellow-spot") &&
+        mapCols[i - 1][x + 3] &&
+        mapCols[i - 1][x + 3].classList.contains("yellow-spot")) ||
       // CAS 2.1 : LIGNE HORIZONTALE JAUNE (DROITE)
-      (mapCols[i][x].classList.contains("yellow-spot") && //case de droite
-        mapCols[i + 1][x].classList.contains("yellow-spot") && // case 2x à droite
-        mapCols[i + 2][x].classList.contains("yellow-spot")) || // case 3x à droite
+      (mapCols[i] &&
+        mapCols[i][x] &&
+        mapCols[i][x].classList.contains("yellow-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x] &&
+        mapCols[i + 1][x].classList.contains("yellow-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x] &&
+        mapCols[i + 2][x].classList.contains("yellow-spot")) ||
       // CAS 2.2 : LIGNE HORIZONTALE JAUNE (GAUCHE)
-      (mapCols[i - 2][x].classList.contains("yellow-spot") && //case 1x à gauche
-        mapCols[i - 3][x].classList.contains("yellow-spot") && // case 2x à gauche
-        mapCols[i - 4][x].classList.contains("yellow-spot")) || // case 3x à gauche
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x] &&
+        mapCols[i - 2][x].classList.contains("yellow-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x] &&
+        mapCols[i - 3][x].classList.contains("yellow-spot") &&
+        mapCols[i - 4] &&
+        mapCols[i - 4][x] &&
+        mapCols[i - 4][x].classList.contains("yellow-spot")) ||
       // CAS 2.3 : LIGNE HORIZONTALE JAUNE (MIX DROITE/GAUCHE)
-      (mapCols[i][x].classList.contains("yellow-spot") && //case de droite
-        mapCols[i - 2][x].classList.contains("yellow-spot") && //case de gauche
-        (mapCols[i + 1][x].classList.contains("yellow-spot") ||
-          mapCols[i - 3][x].classList.contains("yellow-spot"))) || //case 2x à droite OU 2x à gauche
+      (mapCols[i] &&
+        mapCols[i][x] &&
+        mapCols[i][x].classList.contains("yellow-spot") &&
+        mapCols[i - 2] &&
+        mapCols[i - 2][x] &&
+        mapCols[i - 2][x].classList.contains("yellow-spot") &&
+        ((mapCols[i + 1] &&
+          mapCols[i + 1][x] &&
+          mapCols[i + 1][x].classList.contains("yellow-spot")) ||
+          (mapCols[i - 3] &&
+            mapCols[i - 3][x] &&
+            mapCols[i - 3][x].classList.contains("yellow-spot")))) ||
       //CAS 3.1 : DIAGONALES JAUNES HAUT DROITE
-      (mapCols[i][x - 1].classList.contains("yellow-spot") &&
+      (mapCols[i] &&
+        mapCols[i][x - 1] &&
+        mapCols[i][x - 1].classList.contains("yellow-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x - 2] &&
         mapCols[i + 1][x - 2].classList.contains("yellow-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x - 3] &&
         mapCols[i + 2][x - 3].classList.contains("yellow-spot")) ||
       //CAS 3.2 : DIAGONALES JAUNES HAUT GAUCHE
-      (mapCols[i - 2][x - 1].classList.contains("yellow-spot") &&
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x - 1] &&
+        mapCols[i - 2][x - 1].classList.contains("yellow-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x - 2] &&
         mapCols[i - 3][x - 2].classList.contains("yellow-spot") &&
-        mapCols[i - 4][x - 3].classList.contains("yellow-spot"))
+        mapCols[i - 4] &&
+        mapCols[i - 4][x - 3] &&
+        mapCols[i - 4][x - 3].classList.contains("yellow-spot")) ||
+      //CAS 3.3 : DIAGONALES JAUNES BAS GAUCHE
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x + 1] &&
+        mapCols[i - 2][x + 1].classList.contains("yellow-spot") &&
+        mapCols[i - 3] &&
+        mapCols[i - 3][x + 2] &&
+        mapCols[i - 3][x + 2].classList.contains("yellow-spot") &&
+        mapCols[i - 4] &&
+        mapCols[i - 4][x + 3] &&
+        mapCols[i - 4][x + 3].classList.contains("yellow-spot")) ||
+      //CAS 3.4 DIAGONALES JAUNES BAS DROITE
+      (mapCols[i] &&
+        mapCols[i][x + 1] &&
+        mapCols[i][x + 1].classList.contains("yellow-spot") &&
+        mapCols[i + 1] &&
+        mapCols[i + 1][x + 2] &&
+        mapCols[i + 1][x + 2].classList.contains("yellow-spot") &&
+        mapCols[i + 2] &&
+        mapCols[i + 2][x + 3] &&
+        mapCols[i + 2][x + 3].classList.contains("yellow-spot")) || //haut droite existe, bas gauche existe, et OU 2x bas gauche OU 2x bas droite
+      //CAS 3.5 DIAGONALES MIXTE HAUT/BAS DANS UN SENS
+      (mapCols[i] &&
+        mapCols[i][x - 1] &&
+        mapCols[i][x - 1].classList.contains("yellow-spot") && //en haut a droite
+        mapCols[i - 2] &&
+        mapCols[i - 2][x + 1] &&
+        mapCols[i - 2][x + 1].classList.contains("yellow-spot") && // en bas à gauche
+        ((mapCols[i + 1] &&
+          mapCols[i + 1][x - 2].classList.contains("yellow-spot")) || //2x haut droite ou gauche
+          (mapCols[i - 3] &&
+            mapCols[i - 3][x + 2].classList.contains("yellow-spot")))) ||
+      (mapCols[i - 2] &&
+        mapCols[i - 2][x - 1] &&
+        mapCols[i - 2][x - 1].classList.contains("yellow-spot") &&
+        mapCols[i] &&
+        mapCols[i][x + 1] &&
+        mapCols[i][x + 1].classList.contains("yellow-spot") &&
+        ((mapCols[i - 3] &&
+          mapCols[i - 3][x - 2].classList.contains("yellow-spot")) ||
+          (mapCols[i + 1] &&
+            mapCols[i + 1][x + 2].classList.contains("yellow-spot"))))
     ) {
       gameOver = true;
-      console.log("YELLOW WIN");
+      console.log("RED WIN");
+      revealWinner();
     }
   }
   return gameOver;
 }
 
-function checkVictory() {
+function revealWinner() {
   if (gameOver) {
     console.log("We have a winner !");
   }
