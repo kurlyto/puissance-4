@@ -10,7 +10,7 @@ function setInitialState() {
 }
 
 function listenToStartButton() {
-  const startButton = document.getElementById("start-button");
+  const startButton = document.querySelector(".start-button");
   startButton.addEventListener("click", () => {
     startButton.remove();
     createBoard();
@@ -493,32 +493,37 @@ function revealWinner(isGameOver, hasRedWin) {
   const board = document.getElementById("board");
   const main = document.getElementsByTagName("main")[0];
   const endMessage = document.createElement("div");
-  const replayButton = document.createElement("button");
+  const restartButton = document.createElement("button");
+  const endSection = document.createElement("section");
   if (isGameOver && hasRedWin === true) {
-    endMessage.id = "end-message";
+    endSection.id = "end-section";
+    endMessage.className = "end-message";
+    restartButton.className = "restart-button";
     endMessage.textContent = "Red won !";
-    main.appendChild(endMessage);
-    replayButton.id = "start-button";
-    replayButton.textContent = "Play Again ?";
-    main.appendChild(replayButton);
-    replayButton.addEventListener("click", () => {
+    restartButton.textContent = "Play Again ?";
+    endSection.appendChild(endMessage);
+    endSection.appendChild(restartButton);
+    main.appendChild(endSection);
+    restartButton.addEventListener("click", () => {
       board.remove();
-      replayButton.remove();
+      restartButton.remove();
       endMessage.remove();
       setInitialState();
       createBoard();
     });
   }
   if (isGameOver && hasRedWin === false) {
-    endMessage.id = "end-message";
+    endSection.id = "end-section";
+    endMessage.className = "end-message";
+    restartButton.className = "restart-button";
     endMessage.textContent = "Yellow won !";
-    main.appendChild(endMessage);
-    replayButton.id = "start-button";
-    replayButton.textContent = "Play Again ?";
-    main.appendChild(replayButton);
-    replayButton.addEventListener("click", () => {
+    restartButton.textContent = "Play Again ?";
+    endSection.appendChild(endMessage);
+    endSection.appendChild(restartButton);
+    main.appendChild(endSection);
+    restartButton.addEventListener("click", () => {
       board.remove();
-      replayButton.remove();
+      restartButton.remove();
       endMessage.remove();
       setInitialState();
       createBoard();
@@ -529,9 +534,21 @@ function revealWinner(isGameOver, hasRedWin) {
   }
   if (isGameOver && hasRedWin === null) {
     console.log("Match nul !");
-    endMessage.id = "end-message";
+    endSection.id = "end-section";
+    endMessage.className = "end-message";
+    restartButton.className = "restart-button";
     endMessage.textContent = "Draw";
-    main.appendChild(endMessage);
+    restartButton.textContent = "Play Again ?";
+    endSection.appendChild(endMessage);
+    endSection.appendChild(restartButton);
+    main.appendChild(endSection);
+    restartButton.addEventListener("click", () => {
+      board.remove();
+      restartButton.remove();
+      endMessage.remove();
+      setInitialState();
+      createBoard();
+    });
   }
 }
 

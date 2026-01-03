@@ -9,7 +9,7 @@ body {
   max-height:100px;
 }
 
-#start-button{
+.start-button{
   color:rgb(103, 86, 233);
   text-shadow: 3px 3px 3px rgba(0,0,0,0.9);
   font-size:32px;
@@ -19,9 +19,9 @@ body {
   padding:10px;
   border:white 5px solid;
   display: block;
-  margin: 0px auto 0 auto;
+  margin: 210px;
 }
-#start-button:hover{
+.start-button:hover{
   background-color:rgb(177, 187, 195);
   cursor:pointer;
 }
@@ -34,7 +34,7 @@ body {
   border-radius:5px;
   border: 2px solid black;
   margin-bottom:10px;
-  margin-top:20px;
+  margin-top:70px;
 }
 #board:hover{
   cursor:pointer;
@@ -79,7 +79,7 @@ body {
   border:1px solid white;
 }
 
-#end-message{
+.end-message{
   color:rgb(103, 86, 233);
   text-shadow: 3px 3px 3px rgba(0,0,0,0.9);
   font-size:32px;
@@ -87,10 +87,25 @@ body {
   background-color:rgb(0, 0, 0);
   border-radius:15px;
   padding : 10px;
+}
+.end-message:hover{
+  cursor:default;
+}
+
+.restart-button {
+  color:rgb(103, 86, 233);
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+  font-size:30px;
+  font-family: "Bungee", cursive;
+  background-color:rgb(0, 0, 0);
+  border-radius:15px;
+  padding:10px;
+  border:white 5px solid;
   margin-bottom:10px;
 }
-#end-message:hover{
-  cursor:default;
+.restart-button:hover{
+  background-color:rgb(177, 187, 195);
+  cursor:pointer;
 }
 
 
@@ -111,9 +126,10 @@ footer {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10px;
+  bottom: 1px;
   font-family: "Bungee", cursive;
   font-size: 16px;
+  margin-top:20px;
 }
 
 a{
